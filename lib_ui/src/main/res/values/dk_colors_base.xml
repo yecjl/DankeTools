@@ -1,0 +1,138 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--white-->
+    <color name="dk_color_white_0alpha">#00FFFFFF</color>
+    <color name="dk_color_white_1alpha">#19FFFFFF</color>
+    <color name="dk_color_white_2alpha">#33FFFFFF</color>
+    <color name="dk_color_white_3alpha">#4CFFFFFF</color>
+    <color name="dk_color_white_4alpha">#66FFFFFF</color>
+    <color name="dk_color_white_5alpha">#7FFFFFFF</color>
+    <color name="dk_color_white_6alpha">#99FFFFFF</color>
+    <color name="dk_color_white_7alpha">#B2FFFFFF</color>
+    <color name="dk_color_white_8alpha">#C8FFFFFF</color>
+    <color name="dk_color_white_9alpha">#E5FFFFFF</color>
+    <color name="dk_color_white_95alpha">#F2FFFFFF</color>
+    <color name="dk_color_white_10alpha">#FFFFFFFF</color>
+
+    <!--black-->
+    <color name="dk_color_black_0alpha">#00000000</color>
+    <color name="dk_color_black_1alpha">#19000000</color>
+    <color name="dk_color_black_2alpha">#33000000</color>
+    <color name="dk_color_black_3alpha">#4C000000</color>
+    <color name="dk_color_black_4alpha">#66000000</color>
+    <color name="dk_color_black_5alpha">#7F000000</color>
+    <color name="dk_color_black_6alpha">#99000000</color>
+    <color name="dk_color_black_7alpha">#B2000000</color>
+    <color name="dk_color_black_8alpha">#C8000000</color>
+    <color name="dk_color_black_9alpha">#E5000000</color>
+    <color name="dk_color_black_10alpha">#FF000000</color>
+
+    <!--red-->
+    <color name="dk_color_red_0alpha">#00DF2000</color>
+    <color name="dk_color_red_1alpha">#19DF2000</color>
+    <color name="dk_color_red_2alpha">#33DF2000</color>
+    <color name="dk_color_red_3alpha">#4CDF2000</color>
+    <color name="dk_color_red_4alpha">#66DF2000</color>
+    <color name="dk_color_red_5alpha">#7FDF2000</color>
+    <color name="dk_color_red_6alpha">#99DF2000</color>
+    <color name="dk_color_red_7alpha">#B2DF2000</color>
+    <color name="dk_color_red_8alpha">#C8DF2000</color>
+    <color name="dk_color_red_9alpha">#E5DF2000</color>
+    <color name="dk_color_red_10alpha">#FFDF2000</color>
+
+    <!--blue-->
+    <color name="dk_color_blue_0alpha">#000077FF</color>
+    <color name="dk_color_blue_1alpha">#190077FF</color>
+    <color name="dk_color_blue_2alpha">#330077FF</color>
+    <color name="dk_color_blue_3alpha">#4C0077FF</color>
+    <color name="dk_color_blue_4alpha">#660077FF</color>
+    <color name="dk_color_blue_5alpha">#7F0077FF</color>
+    <color name="dk_color_blue_6alpha">#990077FF</color>
+    <color name="dk_color_blue_7alpha">#B20077FF</color>
+    <color name="dk_color_blue_8alpha">#C80077FF</color>
+    <color name="dk_color_blue_9alpha">#E50077FF</color>
+    <color name="dk_color_blue_10alpha">#FF0077FF</color>
+
+    <!--green-->
+    <color name="dk_color_green_0alpha">#0000B754</color>
+    <color name="dk_color_green_1alpha">#1900B754</color>
+    <color name="dk_color_green_2alpha">#3300B754</color>
+    <color name="dk_color_green_3alpha">#4C00B754</color>
+    <color name="dk_color_green_4alpha">#6600B754</color>
+    <color name="dk_color_green_5alpha">#7F00B754</color>
+    <color name="dk_color_green_6alpha">#9900B754</color>
+    <color name="dk_color_green_7alpha">#B200B754</color>
+    <color name="dk_color_green_8alpha">#C800B754</color>
+    <color name="dk_color_green_9alpha">#E500B754</color>
+    <color name="dk_color_green_10alpha">#FF00B754</color>
+
+    <!--orange-->
+    <color name="dk_color_orange_0alpha">#00FF7700</color>
+    <color name="dk_color_orange_1alpha">#19FF7700</color>
+    <color name="dk_color_orange_2alpha">#33FF7700</color>
+    <color name="dk_color_orange_3alpha">#4CFF7700</color>
+    <color name="dk_color_orange_4alpha">#66FF7700</color>
+    <color name="dk_color_orange_5alpha">#7FFF7700</color>
+    <color name="dk_color_orange_6alpha">#99FF7700</color>
+    <color name="dk_color_orange_7alpha">#B2FF7700</color>
+    <color name="dk_color_orange_8alpha">#C8FF7700</color>
+    <color name="dk_color_orange_9alpha">#E5FF7700</color>
+    <color name="dk_color_orange_10alpha">#FFFF7700</color>
+
+    <!--purple-->
+    <color name="dk_color_purple_0alpha">#005E3FCE</color>
+    <color name="dk_color_purple_1alpha">#195E3FCE</color>
+    <color name="dk_color_purple_2alpha">#335E3FCE</color>
+    <color name="dk_color_purple_3alpha">#4C5E3FCE</color>
+    <color name="dk_color_purple_4alpha">#665E3FCE</color>
+    <color name="dk_color_purple_5alpha">#7F5E3FCE</color>
+    <color name="dk_color_purple_6alpha">#995E3FCE</color>
+    <color name="dk_color_purple_7alpha">#B25E3FCE</color>
+    <color name="dk_color_purple_8alpha">#C85E3FCE</color>
+    <color name="dk_color_purple_9alpha">#E55E3FCE</color>
+    <color name="dk_color_purple_10alpha">#FF5E3FCE</color>
+
+    <!--yellow-->
+    <color name="dk_color_yellow_0alpha">#00FFDD00</color>
+    <color name="dk_color_yellow_1alpha">#19FFDD00</color>
+    <color name="dk_color_yellow_2alpha">#33FFDD00</color>
+    <color name="dk_color_yellow_3alpha">#4CFFDD00</color>
+    <color name="dk_color_yellow_4alpha">#66FFDD00</color>
+    <color name="dk_color_yellow_5alpha">#7FFFDD00</color>
+    <color name="dk_color_yellow_6alpha">#99FFDD00</color>
+    <color name="dk_color_yellow_7alpha">#B2FFDD00</color>
+    <color name="dk_color_yellow_8alpha">#C8FFDD00</color>
+    <color name="dk_color_yellow_9alpha">#E5FFDD00</color>
+    <color name="dk_color_yellow_10alpha">#FFFFDD00</color>
+
+    <!--gray-->
+    <color name="dk_color_gray_333">#333333</color>
+    <color name="dk_color_gray_666">#666666</color>
+    <color name="dk_color_gray_999">#999999</color>
+    <color name="dk_color_gray_ccc">#CCCCCC</color>
+    <color name="dk_color_gray_ddd">#DDDDDD</color>
+    <color name="dk_color_gray_ec">#ECECEC</color>
+    <color name="dk_color_gray_d8">#D8D8D8</color>
+
+    <!--gray-->
+    <color name="dk_color_gray_ddd_0alpha">#00DDDDDD</color>
+    <color name="dk_color_gray_ddd_1alpha">#19DDDDDD</color>
+    <color name="dk_color_gray_ddd_2alpha">#33DDDDDD</color>
+    <color name="dk_color_gray_ddd_3alpha">#4CDDDDDD</color>
+    <color name="dk_color_gray_ddd_4alpha">#66DDDDDD</color>
+    <color name="dk_color_gray_ddd_5alpha">#7FDDDDDD</color>
+    <color name="dk_color_gray_ddd_6alpha">#99DDDDDD</color>
+    <color name="dk_color_gray_ddd_7alpha">#B2DDDDDD</color>
+    <color name="dk_color_gray_ddd_8alpha">#C8DDDDDD</color>
+    <color name="dk_color_gray_ddd_9alpha">#E5DDDDDD</color>
+    <color name="dk_color_gray_ddd_10alpha">#FFDDDDDD</color>
+
+    <!--press-->
+    <color name="dk_color_red_press">#FF2400</color>
+    <color name="dk_color_blue_press">#009DFF</color>
+    <color name="dk_color_green_press">#00D361</color>
+    <color name="dk_color_orange_press">#FF8F2E</color>
+    <color name="dk_color_purple_press">#8766FF</color>
+    <color name="dk_color_yellow_press">#FFE438</color>
+
+</resources>
