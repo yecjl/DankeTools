@@ -1,2 +1,3 @@
+include ':lib_ui'
 include ':app'
 rootProject.name = "DankeTools"
