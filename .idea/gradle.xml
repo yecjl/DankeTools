@@ -12,12 +12,23 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/lib_ui" />
+            <option value="$PROJECT_DIR$/arch" />
+            <option value="$PROJECT_DIR$/arch-annotation" />
+            <option value="$PROJECT_DIR$/arch-compiler" />
+            <option value="$PROJECT_DIR$/compiler" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/lint" />
+            <option value="$PROJECT_DIR$/lintrule" />
+            <option value="$PROJECT_DIR$/qmui" />
+            <option value="$PROJECT_DIR$/skin-maker" />
+            <option value="$PROJECT_DIR$/skin-maker-plugin" />
+            <option value="$PROJECT_DIR$/type" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
         <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
+    <option name="offlineMode" value="true" />
   </component>
 </project>

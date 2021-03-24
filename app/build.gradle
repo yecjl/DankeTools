@@ -1,17 +1,17 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion as int
-    buildToolsVersion rootProject.ext.buildToolsVersion as String
+    compileSdkVersion parent.ext.compileSdkVersion as int
+    buildToolsVersion parent.ext.buildToolsVersion as String
 
     defaultConfig {
         applicationId "com.study.danketools"
-        minSdkVersion rootProject.ext.minSdkVersion as int
-        targetSdkVersion rootProject.ext.targetSdkVersion as int
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        minSdkVersion parent.ext.minSdkVersion as int
+        targetSdkVersion parent.ext.targetSdkVersion as int
+        versionCode parent.ext.versionCode
+        versionName parent.ext.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -26,17 +26,29 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    // 避免 lint 检测出错时停止构建
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
 
-    api "androidx.appcompat:appcompat:$rootProject.ext.appcompatVersion"
-    api "com.google.android.material:material:$rootProject.ext.materialVersion"
+    api "androidx.appcompat:appcompat:$appcompatVersion"
+    api "com.google.android.material:material:$materialVersion"
     implementation "com.jakewharton:butterknife:$butterknifeVersion"
     api "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
 
-    implementation project(path: ':lib_ui')
+    implementation project(':lib')
+    api project(':lint')
+    implementation project(':qmui')
+    implementation project(':arch')
+    implementation project(':type')
+    kapt project(':compiler')
+    kapt project(':arch-compiler')
+    implementation project(":skin-maker")
 }
