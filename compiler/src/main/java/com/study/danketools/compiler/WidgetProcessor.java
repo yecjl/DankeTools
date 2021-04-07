@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-package com.qmuiteam.qmuidemo.compiler;
+package com.study.danketools.compiler;
 
 import com.google.auto.service.AutoService;
+import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
@@ -25,7 +26,6 @@ import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import com.squareup.javapoet.WildcardTypeName;
-import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 
 import java.io.IOException;
 import java.util.LinkedHashSet;
@@ -61,12 +61,12 @@ public class WidgetProcessor extends AbstractProcessor {
     private boolean mIsFileCreated = false;
 
     private final String mClassName = "QDWidgetContainer";
-    private final String mPackageName = "com.qmuiteam.qmuidemo.manager";
+    private final String mPackageName = "com.study.danketools.manager";
 
     ClassName mMapName = ClassName.get("java.util", "Map");
     ClassName mHashMapName = ClassName.get("java.util", "HashMap");
-    ClassName mItemDescName = ClassName.get("com.qmuiteam.qmuidemo.model", "QDItemDescription");
-    ClassName mBaseFragmentName = ClassName.get("com.qmuiteam.qmuidemo.base", "BaseFragment");
+    ClassName mItemDescName = ClassName.get("com.study.danketools.model", "QDItemDescription");
+    ClassName mBaseFragmentName = ClassName.get("com.study.danketools.base", "BaseFragment");
     TypeName mBaseFragmentClassName = ParameterizedTypeName.get(ClassName.get(Class.class),
             WildcardTypeName.subtypeOf(mBaseFragmentName));
     TypeName mMapFieldTypeName = ParameterizedTypeName.get(mMapName,
