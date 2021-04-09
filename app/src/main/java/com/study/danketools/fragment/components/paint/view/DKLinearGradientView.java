@@ -45,7 +45,7 @@ public class DKLinearGradientView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int drawWidth = 500;
+        int drawWidth = mWidth / 3;
         LinearGradient linearGradient = new LinearGradient(0, 0, drawWidth, drawWidth, mColors, null, tile);
         mPaint.setShader(linearGradient);
         canvas.translate(mWidth / 2 - drawWidth, 0);

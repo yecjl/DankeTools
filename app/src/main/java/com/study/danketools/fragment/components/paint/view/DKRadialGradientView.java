@@ -47,7 +47,7 @@ public class DKRadialGradientView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int radius = 500;
+        int radius = mWidth / 3;
         int cx = mWidth / 2;
         int cy = radius;
         RadialGradient radialGradient = new RadialGradient(cx, cy, radius / 2, mColors, null, tile);

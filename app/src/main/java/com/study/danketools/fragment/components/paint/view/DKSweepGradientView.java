@@ -46,7 +46,7 @@ public class DKSweepGradientView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int radius = 500;
+        int radius = mWidth / 3;
         int cx = mWidth / 2;
         int cy = mHeight / 2;
         SweepGradient sweepGradient = new SweepGradient(cx, cy, mColors, null);
