@@ -17,7 +17,9 @@
 package com.study.danketools.manager;
 
 import com.study.danketools.base.BaseFragment;
-import com.study.danketools.fragment.components.QDButtonFragment;
+import com.study.danketools.fragment.components.DKPaintFragment;
+import com.study.danketools.fragment.components.QDFloatLayoutFragment;
+import com.study.danketools.fragment.sourcecode.DKXmlLoadingProcessFragment;
 import com.study.danketools.model.QDItemDescription;
 
 import java.util.ArrayList;
@@ -56,9 +58,10 @@ public class QDDataManager {
      */
     private void initComponentsDesc() {
         mComponentsNames = new ArrayList<>();
-        mComponentsNames.add(QDButtonFragment.class);
+        mComponentsNames.add(QDFloatLayoutFragment.class);
+        mComponentsNames.add(DKPaintFragment.class);
+//        mComponentsNames.add(QDButtonFragment.class);
 //        mComponentsNames.add(QDDialogFragment.class);
-//        mComponentsNames.add(QDFloatLayoutFragment.class);
 //        mComponentsNames.add(QDEmptyViewFragment.class);
 //        mComponentsNames.add(QDTabSegmentFragment.class);
 //        mComponentsNames.add(QDProgressBarFragment.class);
@@ -103,6 +106,7 @@ public class QDDataManager {
      */
     private void initLabDesc() {
         mLabNames = new ArrayList<>();
+        mLabNames.add(DKXmlLoadingProcessFragment.class);
 //        mLabNames.add(QDAnimationListViewFragment.class);
 //        mLabNames.add(QDSnapHelperFragment.class);
 //        mLabNames.add(QDArchTestFragment.class);

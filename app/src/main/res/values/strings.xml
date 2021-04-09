@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">DankeTools</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+
+    <!-- paint 渲染之BitmapShader位图渲染-->
+    <string name="paint_shader_clamp">CLAMP</string>
+    <string name="paint_shader_repeat">REPEAT</string>
+    <string name="paint_shader_mirror">MIRROR</string>
+    <string name="bitmap_shader_tileMode_title">TileMode 拉伸形式：在图片和显示区域大小不符的情况下进行扩充渲染</string>
+    <string name="bitmap_shader_scale_title">设置像素矩阵，来调整大小</string>
+    <string name="bitmap_shader_circle_title">绘制圆</string>
+    <string name="bitmap_shader_oval_title">绘制椭圆</string>
+    <string name="compose_shader_title">用ComposeShader即可实现心形图渐变效果</string>
+    <string name="compose_shader_detail_title">BitmapShader对应目标像素，LinearGradient对应源像素，像素颜色混合采用MULTIPLY模式</string>
 </resources>

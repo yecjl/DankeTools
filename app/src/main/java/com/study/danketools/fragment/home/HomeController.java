@@ -19,6 +19,7 @@ package com.study.danketools.fragment.home;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.SparseArray;
 import android.view.View;
@@ -28,6 +29,7 @@ import android.widget.LinearLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.qmuiteam.qmui.arch.QMUIFragment;
 import com.qmuiteam.qmui.util.QMUIViewHelper;
 import com.qmuiteam.qmui.widget.QMUITopBarLayout;
 import com.study.danketools.QDMainActivity;
@@ -36,9 +38,13 @@ import com.study.danketools.base.BaseFragment;
 import com.study.danketools.base.BaseRecyclerAdapter;
 import com.study.danketools.base.RecyclerViewHolder;
 import com.study.danketools.decorator.GridDividerItemDecoration;
+import com.study.danketools.fragment.QDWebExplorerFragment;
 import com.study.danketools.model.QDItemDescription;
 
 import java.util.List;
+
+import static com.study.danketools.fragment.QDWebExplorerFragment.EXTRA_TITLE;
+import static com.study.danketools.fragment.QDWebExplorerFragment.EXTRA_URL;
 
 /**
  * @author cginechen
@@ -100,6 +106,13 @@ public abstract class HomeController extends LinearLayout {
                 QDItemDescription item = mItemAdapter.getItem(pos);
                 try {
                     BaseFragment fragment = item.getDemoClass().newInstance();
+                    if (fragment instanceof QDWebExplorerFragment) {
+                        Bundle bundle = new Bundle();
+                        bundle.putString(EXTRA_URL, item.getDocUrl());
+                        bundle.putString(EXTRA_TITLE, item.getName());
+                        fragment.setArguments(bundle);
+                    }
+                    startFragment(fragment);
 //                    if (fragment instanceof QDNotchHelperFragment) {
 //                        Context context = getContext();
 //                        Intent intent = QDMainActivity.of(context, QDNotchHelperFragment.class);
@@ -108,7 +121,7 @@ public abstract class HomeController extends LinearLayout {
 //                            ((Activity) context).overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 //                        }
 //                    } else {
-                        startFragment(fragment);
+
 //                    }
 
                 } catch (Exception e) {
