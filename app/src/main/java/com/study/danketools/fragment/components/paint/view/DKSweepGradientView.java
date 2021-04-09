@@ -48,7 +48,7 @@ public class DKSweepGradientView extends View {
         super.onDraw(canvas);
         int radius = mWidth / 3;
         int cx = mWidth / 2;
-        int cy = mHeight / 2;
+        int cy = radius;
         SweepGradient sweepGradient = new SweepGradient(cx, cy, mColors, null);
         mPaint.setShader(sweepGradient);
         canvas.drawCircle(cx, cy, radius, mPaint);

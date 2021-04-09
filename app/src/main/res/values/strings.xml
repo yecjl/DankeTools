@@ -13,6 +13,8 @@
     <string name="bitmap_shader_oval_title">绘制椭圆</string>
     <string name="linear_gradient_textview_title">利用线性渲染，实现歌词的显示</string>
     <string name="linear_gradient_textview_detail">Paint高级使用之LinearGradient线性渲染来显示歌词</string>
+    <string name="sweep_gradient_color_title">SweepGradient扫描渲染，颜色渐变效果展示</string>
+    <string name="sweep_gradient_radar_title">雷达扫描功能效果展示</string>
     <string name="compose_shader_title">用ComposeShader即可实现心形图渐变效果</string>
     <string name="compose_shader_detail_title">BitmapShader对应目标像素，LinearGradient对应源像素，像素颜色混合采用MULTIPLY模式</string>
 </resources>

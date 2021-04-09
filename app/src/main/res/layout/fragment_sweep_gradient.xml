@@ -31,10 +31,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/common_content_spacing">
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:layout_marginBottom="@dimen/common_content_spacing"
+                android:text="@string/sweep_gradient_color_title" />
 
             <com.study.danketools.fragment.components.paint.view.DKSweepGradientView
                 android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp" />
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/common_content_spacing"
+                android:text="@string/sweep_gradient_radar_title" />
+
+            <com.study.danketools.fragment.components.paint.view.DKSweepGradientRadarView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
