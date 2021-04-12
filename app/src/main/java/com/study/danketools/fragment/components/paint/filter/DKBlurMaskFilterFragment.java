@@ -1,4 +1,4 @@
-package com.study.danketools.fragment.components.paint;
+package com.study.danketools.fragment.components.paint.filter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,25 +7,21 @@ import com.qmuiteam.qmui.widget.QMUITopBarLayout;
 import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 import com.study.danketools.R;
 import com.study.danketools.base.BaseFragment;
-import com.study.danketools.fragment.components.paint.view.DKComposeShaderView;
-import com.study.danketools.fragment.components.paint.view.DKSweepGradientView;
 import com.study.danketools.manager.QDDataManager;
 import com.study.danketools.model.QDItemDescription;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-@Widget(name = "ComposeShader组合渲染")
-public class DKComposeShaderFragment extends BaseFragment {
+@Widget(name = "模糊遮罩滤镜")
+public class DKBlurMaskFilterFragment extends BaseFragment {
     @BindView(R.id.topbar)
     QMUITopBarLayout mTopBar;
-    @BindView(R.id.view)
-    DKComposeShaderView view;
     private QDItemDescription mQDItemDescription;
 
     @Override
     protected View onCreateView() {
-        View root = LayoutInflater.from(getContext()).inflate(R.layout.fragment_compose_shader, null);
+        View root = LayoutInflater.from(getContext()).inflate(R.layout.fragment_blur_mask_filter, null);
         ButterKnife.bind(this, root);
         mQDItemDescription = QDDataManager.getInstance().getDescription(this.getClass());
         initTopBar();

@@ -1,33 +1,30 @@
-package com.study.danketools.fragment.components.paint;
+package com.study.danketools.fragment.components.paint.shader;
 
-import android.graphics.Shader;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import com.qmuiteam.qmui.widget.QMUITopBarLayout;
-import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 import com.study.danketools.R;
 import com.study.danketools.base.BaseFragment;
-import com.study.danketools.fragment.components.paint.view.DKLinearGradientView;
-import com.study.danketools.fragment.components.paint.view.DKSweepGradientView;
+import com.study.danketools.fragment.components.paint.shader.view.DKComposeShaderView;
 import com.study.danketools.manager.QDDataManager;
 import com.study.danketools.model.QDItemDescription;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-@Widget(name = "SweepGradient扫描渲染")
-public class DKSweepGradientFragment extends BaseFragment {
+@Widget(name = "ComposeShader组合渲染")
+public class DKComposeShaderFragment extends BaseFragment {
     @BindView(R.id.topbar)
     QMUITopBarLayout mTopBar;
     @BindView(R.id.view)
-    DKSweepGradientView view;
+    DKComposeShaderView view;
     private QDItemDescription mQDItemDescription;
 
     @Override
     protected View onCreateView() {
-        View root = LayoutInflater.from(getContext()).inflate(R.layout.fragment_sweep_gradient, null);
+        View root = LayoutInflater.from(getContext()).inflate(R.layout.fragment_compose_shader, null);
         ButterKnife.bind(this, root);
         mQDItemDescription = QDDataManager.getInstance().getDescription(this.getClass());
         initTopBar();

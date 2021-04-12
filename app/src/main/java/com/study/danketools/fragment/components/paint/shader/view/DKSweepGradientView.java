@@ -1,11 +1,9 @@
-package com.study.danketools.fragment.components.paint.view;
+package com.study.danketools.fragment.components.paint.shader.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.LinearGradient;
 import android.graphics.Paint;
-import android.graphics.Shader;
 import android.graphics.SweepGradient;
 import android.util.AttributeSet;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.study.danketools.fragment.components.paint.view;
+package com.study.danketools.fragment.components.paint.shader.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

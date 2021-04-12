@@ -9,11 +9,12 @@ import com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView;
 import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 import com.study.danketools.R;
 import com.study.danketools.base.BaseFragment;
-import com.study.danketools.fragment.components.paint.DKBitmapShaderFragment;
-import com.study.danketools.fragment.components.paint.DKComposeShaderFragment;
-import com.study.danketools.fragment.components.paint.DKLinearGradientFragment;
-import com.study.danketools.fragment.components.paint.DKRadialGradientFragment;
-import com.study.danketools.fragment.components.paint.DKSweepGradientFragment;
+import com.study.danketools.fragment.components.paint.filter.DKBlurMaskFilterFragment;
+import com.study.danketools.fragment.components.paint.shader.DKBitmapShaderFragment;
+import com.study.danketools.fragment.components.paint.shader.DKComposeShaderFragment;
+import com.study.danketools.fragment.components.paint.shader.DKLinearGradientFragment;
+import com.study.danketools.fragment.components.paint.shader.DKRadialGradientFragment;
+import com.study.danketools.fragment.components.paint.shader.DKSweepGradientFragment;
 import com.study.danketools.manager.QDDataManager;
 import com.study.danketools.model.QDItemDescription;
 
@@ -63,6 +64,8 @@ public class DKPaintFragment extends BaseFragment {
         radialGradient.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
         QMUICommonListItemView composeShader = mGroupListView.createItemView(mQDDataManager.getName(DKComposeShaderFragment.class));
         composeShader.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
+        QMUICommonListItemView maskFilter = mGroupListView.createItemView(mQDDataManager.getName(DKBlurMaskFilterFragment.class));
+        maskFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -83,6 +86,9 @@ public class DKPaintFragment extends BaseFragment {
                     } else if (v == composeShader) {
                         DKComposeShaderFragment composeShaderFragment = new DKComposeShaderFragment();
                         startFragment(composeShaderFragment);
+                    } else if (v == maskFilter) {
+                        DKBlurMaskFilterFragment maskFilterFragment = new DKBlurMaskFilterFragment();
+                        startFragment(maskFilterFragment);
                     }
                 }
             }
@@ -97,6 +103,7 @@ public class DKPaintFragment extends BaseFragment {
                 .addTo(mGroupListView);
 
         QMUIGroupListView.newSection(getContext()).setTitle("2、滤镜")
+                .addItemView(maskFilter, onClickListener)
                 .addTo(mGroupListView);
 
         QMUIGroupListView.newSection(getContext()).setTitle("3、Xfermode")

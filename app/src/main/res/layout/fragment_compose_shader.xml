@@ -65,7 +65,7 @@
                     android:gravity="center"
                     android:text="+" />
 
-                <com.study.danketools.fragment.components.paint.view.DKComposeShaderLinearGradientView
+                <com.study.danketools.fragment.components.paint.shader.view.DKComposeShaderLinearGradientView
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1" />
@@ -79,7 +79,7 @@
                 android:layout_marginBottom="20dp"
                 android:text="@string/compose_shader_detail_title" />
 
-            <com.study.danketools.fragment.components.paint.view.DKComposeShaderView
+            <com.study.danketools.fragment.components.paint.shader.view.DKComposeShaderView
                 android:id="@+id/view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

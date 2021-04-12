@@ -1,4 +1,4 @@
-package com.study.danketools.fragment.components.paint;
+package com.study.danketools.fragment.components.paint.shader;
 
 import android.graphics.Shader;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton;
 import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 import com.study.danketools.R;
 import com.study.danketools.base.BaseFragment;
-import com.study.danketools.fragment.components.paint.view.DKLinearGradientView;
+import com.study.danketools.fragment.components.paint.shader.view.DKLinearGradientView;
 import com.study.danketools.manager.QDDataManager;
 import com.study.danketools.model.QDItemDescription;
 

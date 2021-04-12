@@ -1,4 +1,4 @@
-package com.study.danketools.fragment.components.paint.view;
+package com.study.danketools.fragment.components.paint.shader.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,7 +12,6 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 

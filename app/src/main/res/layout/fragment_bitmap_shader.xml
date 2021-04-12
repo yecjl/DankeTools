@@ -99,7 +99,7 @@
                     app:qmui_skin_text_color="?attr/app_skin_btn_test_border_single" />
             </LinearLayout>
 
-            <com.study.danketools.fragment.components.paint.view.DKBitmapShaderView
+            <com.study.danketools.fragment.components.paint.shader.view.DKBitmapShaderView
                 android:id="@+id/iv_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -136,7 +136,7 @@
                 android:padding="@dimen/common_content_spacing"
                 android:text="@string/bitmap_shader_circle_title" />
 
-            <com.study.danketools.fragment.components.paint.view.DKBitmapShaderView
+            <com.study.danketools.fragment.components.paint.shader.view.DKBitmapShaderView
                 android:id="@+id/iv_img_circle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -146,7 +146,7 @@
                 android:padding="@dimen/common_content_spacing"
                 android:text="@string/bitmap_shader_oval_title" />
 
-            <com.study.danketools.fragment.components.paint.view.DKBitmapShaderView
+            <com.study.danketools.fragment.components.paint.shader.view.DKBitmapShaderView
                 android:id="@+id/iv_img_oval"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -156,7 +156,7 @@
                 android:padding="@dimen/common_content_spacing"
                 android:text="@string/bitmap_shader_zoom_img_title" />
 
-            <com.study.danketools.fragment.components.paint.view.DKBitmapShaderZoomImageView
+            <com.study.danketools.fragment.components.paint.shader.view.DKBitmapShaderZoomImageView
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
