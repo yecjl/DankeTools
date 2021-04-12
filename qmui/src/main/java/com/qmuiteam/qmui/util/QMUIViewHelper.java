@@ -24,7 +24,6 @@ import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
@@ -39,7 +38,6 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.core.widget.ImageViewCompat;
 
 import android.view.TouchDelegate;
 import android.view.View;
@@ -753,7 +751,6 @@ public class QMUIViewHelper {
         ViewGroupHelper.offsetDescendantRect(parent, descendant, out);
     }
 
-
     private static class ViewGroupHelper {
         private static final ThreadLocal<Matrix> sMatrix = new ThreadLocal<>();
         private static final ThreadLocal<RectF> sRectF = new ThreadLocal<>();
@@ -794,5 +791,30 @@ public class QMUIViewHelper {
                 m.preConcat(view.getMatrix());
             }
         }
+    }
+
+    public static int getMeasuredDimension(int defaultSize, int measureSpec, View view) {
+        int mySize = defaultSize;
+        int parentMode = View.MeasureSpec.getMode(measureSpec);
+        int parentSize = View.MeasureSpec.getSize(measureSpec);
+        int childDimension = view.getLayoutParams().width;
+
+        switch (parentMode) {
+            case View.MeasureSpec.UNSPECIFIED:
+                mySize = defaultSize;
+                break;
+            case View.MeasureSpec.EXACTLY:
+            case View.MeasureSpec.AT_MOST:
+                // 当子view的LayoutParams>0，即有确切的值
+                if (childDimension >= 0) {
+                    mySize = childDimension;
+                } else if (childDimension == ViewGroup.LayoutParams.MATCH_PARENT) {
+                    mySize = parentSize;
+                } else if (childDimension == ViewGroup.LayoutParams.WRAP_CONTENT) {
+                    mySize = defaultSize;
+                }
+                break;
+        }
+        return mySize;
     }
 }

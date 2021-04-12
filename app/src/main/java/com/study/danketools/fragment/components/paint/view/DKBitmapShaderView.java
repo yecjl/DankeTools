@@ -13,6 +13,7 @@ import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.qmuiteam.qmui.util.QMUIViewHelper;
 import com.study.danketools.R;
 
 import org.jetbrains.annotations.Nullable;
@@ -27,6 +28,9 @@ public class DKBitmapShaderView extends View {
     public static final int SHAPE_RECT = 0;
     public static final int SHAPE_CIRCLE = 1;
     public static final int SHAPE_OVAL = 2;
+    private int bmpWidth;
+    private int bmpHeight;
+    private Bitmap bitmap;
 
     public DKBitmapShaderView(Context context) {
         this(context, null);
@@ -48,25 +52,30 @@ public class DKBitmapShaderView extends View {
         tileY = Shader.TileMode.MIRROR;
         scale = 1;
         shape = SHAPE_RECT;
+
+        bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.img_guidao1);
+        bmpWidth = bitmap.getWidth();
+        bmpHeight = bitmap.getHeight();
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mWidth = getMeasuredWidth();
+
+        setMeasuredDimension(
+                QMUIViewHelper.getMeasuredDimension(mWidth, widthMeasureSpec, this),
+                QMUIViewHelper.getMeasuredDimension(bmpHeight * 2, heightMeasureSpec, this));
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.img_guidao1);
         BitmapShader shader = new BitmapShader(bitmap, tileX, tileY);
         mPaint.setShader(shader);
         mPaint.setAntiAlias(true);
 
-        int bmpWidth = bitmap.getWidth();
-        int bmpHeight = bitmap.getHeight();
         Matrix matrix = new Matrix();
         matrix.setScale(scale, scale);
         shader.setLocalMatrix(matrix);

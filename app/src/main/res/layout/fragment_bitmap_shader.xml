@@ -102,7 +102,7 @@
             <com.study.danketools.fragment.components.paint.view.DKBitmapShaderView
                 android:id="@+id/iv_img"
                 android:layout_width="wrap_content"
-                android:layout_height="320dp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 style="@style/QDCommonTitle"
@@ -139,7 +139,7 @@
             <com.study.danketools.fragment.components.paint.view.DKBitmapShaderView
                 android:id="@+id/iv_img_circle"
                 android:layout_width="wrap_content"
-                android:layout_height="320dp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 style="@style/QDCommonTitle"
@@ -149,7 +149,17 @@
             <com.study.danketools.fragment.components.paint.view.DKBitmapShaderView
                 android:id="@+id/iv_img_oval"
                 android:layout_width="wrap_content"
-                android:layout_height="320dp" />
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/QDCommonTitle"
+                android:padding="@dimen/common_content_spacing"
+                android:text="@string/bitmap_shader_zoom_img_title" />
+
+            <com.study.danketools.fragment.components.paint.view.DKBitmapShaderZoomImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>

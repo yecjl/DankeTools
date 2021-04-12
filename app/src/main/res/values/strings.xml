@@ -11,6 +11,7 @@
     <string name="bitmap_shader_scale_title">设置像素矩阵，来调整大小</string>
     <string name="bitmap_shader_circle_title">绘制圆</string>
     <string name="bitmap_shader_oval_title">绘制椭圆</string>
+    <string name="bitmap_shader_zoom_img_title">放大镜效果</string>
     <string name="linear_gradient_textview_title">利用线性渲染，实现歌词的显示</string>
     <string name="linear_gradient_textview_detail">Paint高级使用之LinearGradient线性渲染来显示歌词</string>
     <string name="sweep_gradient_color_title">SweepGradient扫描渲染，颜色渐变效果展示</string>
