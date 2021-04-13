@@ -10,6 +10,7 @@ import com.qmuiteam.qmuidemo.lib.annotation.Widget;
 import com.study.danketools.R;
 import com.study.danketools.base.BaseFragment;
 import com.study.danketools.fragment.components.paint.filter.DKBlurMaskFilterFragment;
+import com.study.danketools.fragment.components.paint.filter.DKColorMatrixFilterFragment;
 import com.study.danketools.fragment.components.paint.filter.DKEmbossMaskFilterFragment;
 import com.study.danketools.fragment.components.paint.shader.DKBitmapShaderFragment;
 import com.study.danketools.fragment.components.paint.shader.DKComposeShaderFragment;
@@ -69,6 +70,8 @@ public class DKPaintFragment extends BaseFragment {
         blurMaskFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
         QMUICommonListItemView embossMaskFilter = mGroupListView.createItemView(mQDDataManager.getName(DKEmbossMaskFilterFragment.class));
         embossMaskFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
+        QMUICommonListItemView colorMatrixFilter = mGroupListView.createItemView(mQDDataManager.getName(DKColorMatrixFilterFragment.class));
+        colorMatrixFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -93,8 +96,11 @@ public class DKPaintFragment extends BaseFragment {
                         DKBlurMaskFilterFragment maskFilterFragment = new DKBlurMaskFilterFragment();
                         startFragment(maskFilterFragment);
                     } else if (v == embossMaskFilter) {
-                        DKEmbossMaskFilterFragment maskFilterFragment = new DKEmbossMaskFilterFragment();
-                        startFragment(maskFilterFragment);
+                        DKEmbossMaskFilterFragment embossMaskFilterFragment = new DKEmbossMaskFilterFragment();
+                        startFragment(embossMaskFilterFragment);
+                    } else if (v == colorMatrixFilter) {
+                        DKColorMatrixFilterFragment colorMatrixFilterFragment = new DKColorMatrixFilterFragment();
+                        startFragment(colorMatrixFilterFragment);
                     }
                 }
             }
@@ -111,6 +117,7 @@ public class DKPaintFragment extends BaseFragment {
         QMUIGroupListView.newSection(getContext()).setTitle("2、滤镜")
                 .addItemView(blurMaskFilter, onClickListener)
                 .addItemView(embossMaskFilter, onClickListener)
+                .addItemView(colorMatrixFilter, onClickListener)
                 .addTo(mGroupListView);
 
         QMUIGroupListView.newSection(getContext()).setTitle("3、Xfermode")

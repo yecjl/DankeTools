@@ -12,6 +12,8 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.study.danketools.R;
+
 public class DKBlurMaskFilterView extends View {
 
     private Paint mPaint;
@@ -33,7 +35,7 @@ public class DKBlurMaskFilterView extends View {
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setColor(Color.BLACK);
         mTextPaint.setStrokeWidth(10);
-        mTextPaint.setTextSize(30);
+        mTextPaint.setTextSize(getResources().getDimensionPixelSize(R.dimen.qmui_btn_text_size));
     }
 
     @Override
