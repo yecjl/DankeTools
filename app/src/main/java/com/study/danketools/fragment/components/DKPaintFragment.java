@@ -17,6 +17,7 @@ import com.study.danketools.fragment.components.paint.shader.DKComposeShaderFrag
 import com.study.danketools.fragment.components.paint.shader.DKLinearGradientFragment;
 import com.study.danketools.fragment.components.paint.shader.DKRadialGradientFragment;
 import com.study.danketools.fragment.components.paint.shader.DKSweepGradientFragment;
+import com.study.danketools.fragment.components.paint.xfermode.DKXfermodeStandardFragment;
 import com.study.danketools.manager.QDDataManager;
 import com.study.danketools.model.QDItemDescription;
 
@@ -66,12 +67,16 @@ public class DKPaintFragment extends BaseFragment {
         radialGradient.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
         QMUICommonListItemView composeShader = mGroupListView.createItemView(mQDDataManager.getName(DKComposeShaderFragment.class));
         composeShader.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
+
         QMUICommonListItemView blurMaskFilter = mGroupListView.createItemView(mQDDataManager.getName(DKBlurMaskFilterFragment.class));
         blurMaskFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
         QMUICommonListItemView embossMaskFilter = mGroupListView.createItemView(mQDDataManager.getName(DKEmbossMaskFilterFragment.class));
         embossMaskFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
         QMUICommonListItemView colorMatrixFilter = mGroupListView.createItemView(mQDDataManager.getName(DKColorMatrixFilterFragment.class));
         colorMatrixFilter.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
+
+        QMUICommonListItemView xfermodeStandard = mGroupListView.createItemView(mQDDataManager.getName(DKXfermodeStandardFragment.class));
+        xfermodeStandard.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
@@ -101,6 +106,9 @@ public class DKPaintFragment extends BaseFragment {
                     } else if (v == colorMatrixFilter) {
                         DKColorMatrixFilterFragment colorMatrixFilterFragment = new DKColorMatrixFilterFragment();
                         startFragment(colorMatrixFilterFragment);
+                    } else if (v == xfermodeStandard) {
+                        DKXfermodeStandardFragment xfermodeStandardFragment = new DKXfermodeStandardFragment();
+                        startFragment(xfermodeStandardFragment);
                     }
                 }
             }
@@ -121,6 +129,7 @@ public class DKPaintFragment extends BaseFragment {
                 .addTo(mGroupListView);
 
         QMUIGroupListView.newSection(getContext()).setTitle("3、Xfermode")
+                .addItemView(xfermodeStandard, onClickListener)
                 .addTo(mGroupListView);
     }
 }

@@ -26,6 +26,7 @@
     *                  Button                        *
     **********************************************-->
     <dimen name="qmui_btn_text_size">16sp</dimen>
+    <dimen name="qmui_btn_text_14size">13sp</dimen>
     <dimen name="qmui_btn_border_width">1dp</dimen>
 
     <!--**********************************************
